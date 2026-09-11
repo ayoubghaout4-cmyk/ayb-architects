@@ -260,7 +260,15 @@
   .nav__mobile {
     position: fixed;
 
-    inset: 0;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+
+    height: 100vh;
+    height: 100dvh;
+
+    min-height: 100svh;
 
     background: var(--bg);
 
@@ -272,7 +280,10 @@
 
     gap: 28px;
 
-    padding: 0 var(--gutter);
+    padding:
+      env(safe-area-inset-top)
+      var(--gutter)
+      env(safe-area-inset-bottom);
 
     transform: translateY(-100%);
 
@@ -281,6 +292,10 @@
     visibility: hidden;
 
     pointer-events: none;
+
+    overflow-y: auto;
+
+    overscroll-behavior: contain;
 
     transition:
       transform 0.5s var(--ease-architect),
@@ -319,6 +334,8 @@
     margin-top: 20px;
   }
 }
+
+
 /* ========================================
    LANGUAGE SWITCHER
    ======================================== */
@@ -329,6 +346,7 @@
   gap: 10px;
   margin-left: 16px;
 }
+
 
 .nav__languages button {
   border: 0;
@@ -348,9 +366,11 @@
     opacity 0.2s ease;
 }
 
+
 .nav__languages button:hover {
   color: var(--ink);
 }
+
 
 .nav__languages button.is-active {
   color: var(--ink);
@@ -367,6 +387,7 @@
   gap: 18px;
 }
 
+
 .nav__languages--mobile button {
   font-size: 0.82rem;
 }
@@ -380,13 +401,16 @@ html[dir='rtl'] body {
   direction: rtl;
 }
 
+
 html[dir='rtl'] .nav__inner {
   direction: rtl;
 }
 
+
 html[dir='rtl'] .nav__links {
   direction: rtl;
 }
+
 
 html[dir='rtl'] .nav__mobile {
   text-align: right;

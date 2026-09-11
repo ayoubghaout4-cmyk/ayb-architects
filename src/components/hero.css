@@ -454,101 +454,161 @@
       brightness(1.03);
   }
 }
+
+
 /* =========================================================
    MOBILE POLISH — PHONE ONLY
    ========================================================= */
 
 @media (max-width: 520px) {
+
   .hero {
-    height: 82svh;
-    min-height: 600px;
+    width: 100%;
+
+    height: 100vh;
+    height: 100svh;
+    height: 100dvh;
+
+    min-height: 100svh;
+
+    overflow: hidden;
   }
+
+
+  .hero__image-layer {
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    transform: none !important;
+  }
+
+
+  .hero__image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center center;
+  }
+
 
   .hero__type-layer {
     align-items: flex-end;
+
     padding-bottom: 64px;
+
     transform: none !important;
   }
+
 
   .hero__grid {
     gap: 18px;
   }
 
+
   .hero__title-line {
     font-size: clamp(4.2rem, 20vw, 5.3rem);
+
     line-height: 0.88;
+
     letter-spacing: -0.035em;
   }
 
+
   .hero__title-line--outline {
     font-size: clamp(2.25rem, 11.5vw, 3rem);
+
     line-height: 0.95;
+
     letter-spacing: 0;
+
     -webkit-text-stroke: 1.2px #111111;
   }
 
+
   .hero__meta {
     gap: 5px;
+
     max-width: 90%;
   }
+
 
   .hero__meta .label-strong,
   .hero__meta .label {
     font-size: 0.7rem;
+
     line-height: 1.4;
   }
+
 
   .hero__coord {
     bottom: 16px;
   }
-
-  .hero__image {
-    object-position: center center;
-  }
 }
+
+
 /* =========================================================
-   MOBILE POLISH — PHONE ONLY
+   MOBILE POLISH — WHAT WE DO
    ========================================================= */
 
 @media (max-width: 520px) {
+
   .what-we-do {
     padding-top: 54px;
   }
+
 
   .what-we-do__intro {
     padding-bottom: 56px;
   }
 
+
   .what-we-do__heading {
     font-size: clamp(3.1rem, 14vw, 3.7rem);
+
     line-height: 0.92;
+
     letter-spacing: -0.055em;
   }
 
+
   .what-we-do__intro-text {
     margin-top: 24px;
+
     max-width: 32ch;
+
     font-size: 0.98rem;
+
     line-height: 1.5;
   }
+
 
   .service-showcase {
     padding-block: 46px;
   }
+
 
   .service-showcase__grid,
   .service-showcase--reverse .service-showcase__grid {
     gap: 22px;
   }
 
+
   .service-showcase__title {
     font-size: clamp(2.6rem, 12vw, 3.2rem);
+
     line-height: 0.92;
   }
 
+
   .service-showcase__description {
     margin-top: 14px;
+
     font-size: 0.95rem;
+
     line-height: 1.55;
   }
 }
