@@ -10,7 +10,24 @@ import { profile, projects } from '../data/projects'
 import './home.css'
 
 export default function Home() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+
+  const currentLanguage =
+    i18n.resolvedLanguage?.split('-')[0] ||
+    i18n.language?.split('-')[0] ||
+    'en'
+
+  const portfolioLabels = {
+    en: 'Portfolio PDF ↗',
+    fr: 'Portfolio PDF ↗',
+    ar: 'ملف الأعمال PDF ↗',
+  }
+
+  const portfolioLabel =
+    portfolioLabels[currentLanguage] || portfolioLabels.en
+
+  const portfolioUrl =
+    'https://drive.google.com/file/d/13kjaHn6VyAu9D146kD0Y_-FY8vEe1tYN/view?usp=sharing'
 
   const services = [
     {
@@ -174,6 +191,19 @@ export default function Home() {
               >
                 {t('home.fullProfile')}
               </Link>
+
+              <br />
+
+              <a
+                href={portfolioUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-link"
+                data-cursor="link"
+                style={{ marginTop: '12px' }}
+              >
+                {portfolioLabel}
+              </a>
             </Reveal>
           </div>
         </div>
