@@ -1,0 +1,114 @@
+.index-page__head {
+  padding-top: clamp(120px, 18vh, 200px);
+  padding-bottom: clamp(48px, 8vw, 96px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 900px;
+}
+
+.index-row {
+  display: block;
+  border-top: 1px solid var(--line);
+  padding-block: clamp(24px, 4vw, 44px);
+  transition: background 0.4s var(--ease-architect);
+}
+
+.index-row:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.index-row:hover {
+  background: var(--bg-panel);
+}
+
+.index-row__grid {
+  display: grid;
+
+  /* number | project information | SMALL image */
+  grid-template-columns: 90px 1fr 180px;
+
+  align-items: center;
+  gap: clamp(16px, 3vw, 40px);
+}
+
+.index-row__number {
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  color: var(--line-strong);
+}
+
+.index-row__title {
+  margin: 8px 0;
+  transition: color 0.3s var(--ease-architect);
+}
+
+.index-row:hover .index-row__title {
+  color: var(--accent);
+}
+
+.index-row__meta {
+  max-width: 420px;
+}
+
+
+/* =========================
+   PROJECT THUMBNAIL
+   ========================= */
+
+.index-row__image {
+  width: 180px;
+  height: 120px;
+
+  justify-self: end;
+
+  overflow: hidden;
+  background: var(--bg-panel);
+}
+
+/* Don't make every second project huge/tall anymore */
+.index-row__image--tall {
+  width: 180px;
+  height: 120px;
+  aspect-ratio: auto;
+}
+
+/* Make the actual image fill the small box */
+.index-row__image img,
+.index-row__image--tall img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 860px) {
+  .index-row__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .index-row__number {
+    order: -1;
+  }
+
+  .index-row__image {
+    order: 3;
+
+    width: 100%;
+    max-width: 320px;
+    height: 200px;
+
+    justify-self: start;
+  }
+
+  .index-row__image--tall {
+    width: 100%;
+    max-width: 320px;
+    height: 200px;
+  }
+}

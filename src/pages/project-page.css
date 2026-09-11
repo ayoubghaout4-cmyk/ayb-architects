@@ -1,0 +1,593 @@
+/* ========================================
+   ENTIRE PROJECT PAGE
+   ======================================== */
+
+.project-page {
+  background: #ffffff;
+  color: var(--ink);
+}
+
+.project-page .section {
+  background: #ffffff;
+}
+
+
+/* ========================================
+   PROJECT HERO
+   ======================================== */
+
+.project-hero {
+  padding-top: 72px;
+  background: #ffffff;
+}
+
+.project-hero__head {
+  display: flex;
+  justify-content: space-between;
+
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+
+  color: var(--gray);
+
+  margin-bottom: 2px;
+}
+
+.project-hero__title {
+  margin: 0 0 2px;
+}
+
+.project-hero__meta {
+  margin-bottom: 4px;
+  padding-bottom: 6px;
+
+  border-bottom: 1px solid var(--line);
+}
+
+
+/* ========================================
+   HERO IMAGE
+   ======================================== */
+
+.project-hero__image {
+  width: 100%;
+
+  height: clamp(300px, 46vh, 540px);
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  background: #ffffff;
+}
+
+.project-hero__image .parallax-img {
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+}
+
+.project-hero__image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* ========================================
+   INTRO
+   ======================================== */
+
+.project-hero__intro {
+  padding-top: 22px;
+
+  max-width: 720px;
+}
+
+.project-hero__figures {
+  margin-top: 14px;
+
+  padding-bottom: 28px;
+}
+
+
+/* ========================================
+   DRAWING SECTIONS
+   ======================================== */
+
+.drawing {
+  background: #ffffff;
+  overflow: visible;
+}
+
+.drawing .container {
+  overflow: visible;
+}
+
+.drawing__head {
+  margin-bottom: 16px;
+
+  text-transform: uppercase;
+}
+
+.drawing__plate {
+  width: 100%;
+
+  height: auto;
+
+  overflow: visible;
+
+  background: #ffffff;
+
+  padding: 16px;
+
+  border: none;
+}
+
+.drawing__plate img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  max-width: 100%;
+  max-height: none;
+
+  object-fit: contain;
+  object-position: center;
+
+  transform: none !important;
+}
+
+.drawing__note {
+  margin-top: 18px;
+
+  max-width: 640px;
+}
+
+
+/* ========================================
+   FULL IMAGE / RENDER SECTIONS
+   ======================================== */
+
+.fullscreen-moment {
+  width: 100%;
+
+  height: auto;
+  min-height: 0;
+
+  overflow: visible;
+
+  background: #ffffff;
+
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.fullscreen-moment__inner {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+
+/* ========================================
+   BIGGER RENDERS
+   ======================================== */
+
+.fullscreen-moment__image {
+  width: min(90%, 1250px);
+
+  height: auto;
+
+  overflow: visible;
+
+  background: #ffffff;
+}
+
+.fullscreen-moment__image.parallax-img {
+  width: min(90%, 1250px);
+
+  height: auto;
+
+  overflow: visible;
+}
+
+.fullscreen-moment__image img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  max-width: 100%;
+  max-height: none;
+
+  object-fit: contain;
+  object-position: center;
+
+  transform: none !important;
+}
+
+
+/* ========================================
+   CAPTION UNDER RENDER
+   ======================================== */
+
+.fullscreen-moment__label {
+  width: min(90%, 1250px);
+
+  margin-top: 14px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 32px;
+
+  align-items: start;
+}
+
+.fullscreen-moment__note {
+  margin: 0;
+
+  max-width: 46ch;
+
+  color: var(--gray);
+}
+
+
+/* ========================================
+   INTERIORS
+   ======================================== */
+
+.interiors {
+  background: #ffffff;
+
+  overflow: visible;
+}
+
+.interiors__list {
+  margin-top: 24px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 52px;
+}
+
+.interiors__item {
+  display: grid;
+
+  grid-template-columns: 1.4fr 1fr;
+
+  gap: 34px;
+
+  align-items: center;
+}
+
+.interiors__item:nth-child(even) {
+  direction: rtl;
+}
+
+.interiors__item:nth-child(even) > * {
+  direction: ltr;
+}
+
+.interiors__image {
+  width: 100%;
+
+  height: auto;
+
+  overflow: visible;
+
+  background: #ffffff;
+}
+
+.interiors__image .parallax-img {
+  width: 100%;
+
+  height: auto;
+
+  overflow: visible;
+}
+
+.interiors__image img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  max-width: 100%;
+  max-height: none;
+
+  object-fit: contain;
+  object-position: center;
+
+  transform: none !important;
+}
+
+.interiors__text h3 {
+  margin: 0 0 10px;
+}
+
+
+/* ========================================
+   FACADE
+   ======================================== */
+
+.facade {
+  background: #ffffff;
+
+  overflow: visible;
+}
+
+.facade__text {
+  max-width: 640px;
+
+  margin-bottom: 22px;
+}
+
+.facade__image {
+  width: 100%;
+
+  height: auto;
+
+  overflow: visible;
+
+  background: #ffffff;
+}
+
+.facade__image .parallax-img {
+  width: 100%;
+
+  height: auto;
+
+  overflow: visible;
+}
+
+.facade__image img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  max-width: 100%;
+  max-height: none;
+
+  object-fit: contain;
+  object-position: center;
+
+  transform: none !important;
+}
+
+
+/* ========================================
+   PROGRAM / SECTION DRAWINGS
+   ======================================== */
+
+.program {
+  background: #ffffff;
+
+  overflow: visible;
+}
+
+.program__section-image {
+  width: 100%;
+
+  height: auto;
+
+  overflow: visible;
+
+  background: #ffffff;
+
+  padding: 16px;
+
+  border: none;
+
+  margin-bottom: 20px;
+}
+
+.program__section-image img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  max-width: 100%;
+  max-height: none;
+
+  object-fit: contain;
+  object-position: center;
+
+  transform: none !important;
+}
+
+
+/* ========================================
+   PROGRAM LEGEND
+   ======================================== */
+
+.program__legend {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 18px;
+
+  padding-bottom: 40px;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.program__legend-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  text-transform: uppercase;
+}
+
+.program__legend-item i {
+  width: 10px;
+  height: 10px;
+
+  display: inline-block;
+}
+
+
+/* ========================================
+   MATERIALITY
+   ======================================== */
+
+.program__materials {
+  margin-top: 40px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1.3fr 1fr;
+
+  gap: 26px;
+
+  align-items: center;
+}
+
+.program__material-img,
+.program__pattern-img {
+  width: 100%;
+
+  height: auto;
+
+  overflow: visible;
+
+  background: #ffffff;
+}
+
+.program__material-img img,
+.program__pattern-img img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  max-width: 100%;
+  max-height: none;
+
+  object-fit: contain;
+  object-position: center;
+}
+
+.program__material-text {
+  text-align: center;
+}
+
+
+/* ========================================
+   NEXT PROJECT
+   ======================================== */
+
+.project-next {
+  border-top: 1px solid var(--line);
+
+  background: #ffffff;
+}
+
+.project-next__link {
+  display: block;
+}
+
+.project-next__link:hover {
+  background: var(--ink);
+
+  color: #ffffff;
+}
+
+.project-next__inner {
+  padding-block: 72px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.project-next__inner h2 {
+  margin: 0;
+}
+
+
+/* ========================================
+   MOBILE
+   ======================================== */
+
+@media (max-width: 860px) {
+
+  .project-hero {
+    padding-top: 64px;
+  }
+
+  .project-hero__head {
+    margin-bottom: 2px;
+  }
+
+  .project-hero__title {
+    margin-bottom: 2px;
+  }
+
+  .project-hero__meta {
+    margin-bottom: 4px;
+    padding-bottom: 6px;
+  }
+
+  .project-hero__image {
+    height: clamp(260px, 42vh, 420px);
+  }
+
+  .fullscreen-moment {
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+
+  .fullscreen-moment__image,
+  .fullscreen-moment__image.parallax-img {
+    width: 100%;
+  }
+
+  .fullscreen-moment__label {
+    width: 100%;
+
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+
+    margin-top: 12px;
+  }
+
+  .interiors__item,
+  .interiors__item:nth-child(even) {
+    grid-template-columns: 1fr;
+
+    direction: ltr;
+  }
+
+  .program__materials {
+    grid-template-columns: 1fr;
+  }
+}

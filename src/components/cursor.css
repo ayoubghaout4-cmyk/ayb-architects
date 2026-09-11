@@ -1,0 +1,101 @@
+.ayb-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  z-index: 9999;
+  will-change: transform;
+}
+
+.ayb-cursor__line {
+  position: absolute;
+  background: var(--ink);
+  opacity: 0.55;
+}
+
+.ayb-cursor__line--h {
+  width: 22px;
+  height: 1px;
+  top: 0;
+  left: -11px;
+}
+
+.ayb-cursor__line--v {
+  width: 1px;
+  height: 22px;
+  top: -11px;
+  left: 0;
+}
+
+.ayb-cursor__dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+  top: -2px;
+  left: -2px;
+  transition: transform 0.25s var(--ease-architect);
+}
+
+.ayb-cursor__coord {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  opacity: 0.45;
+  white-space: nowrap;
+}
+
+.ayb-cursor__tag {
+  position: absolute;
+  top: -30px;
+  left: 14px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--bg);
+  background: var(--ink);
+  padding: 3px 7px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.2s var(--ease-architect), transform 0.2s var(--ease-architect);
+}
+
+.ayb-cursor--project .ayb-cursor__tag,
+.ayb-cursor--image .ayb-cursor__tag,
+.ayb-cursor--link .ayb-cursor__tag {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ayb-cursor--project .ayb-cursor__line,
+.ayb-cursor--image .ayb-cursor__line {
+  opacity: 0.9;
+}
+
+.ayb-cursor--project .ayb-cursor__line--h {
+  width: 34px;
+  left: -17px;
+}
+
+.ayb-cursor--project .ayb-cursor__line--v {
+  height: 34px;
+  top: -17px;
+}
+
+.ayb-cursor--image .ayb-cursor__dot {
+  transform: scale(1.8);
+}
+
+@media (max-width: 860px) {
+  .ayb-cursor {
+    display: none;
+  }
+}

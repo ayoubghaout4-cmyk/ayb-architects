@@ -1,0 +1,77 @@
+.display-1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-stretch: condensed;
+  letter-spacing: -0.01em;
+  line-height: 0.92;
+  font-size: clamp(3.4rem, 9vw, 9.5rem);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.display-2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 0.96;
+  font-size: clamp(2.4rem, 5.4vw, 5.2rem);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.display-3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1;
+  font-size: clamp(1.6rem, 2.6vw, 2.4rem);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.body-lg {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.05rem, 1.4vw, 1.28rem);
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 46ch;
+}
+
+.body-md {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  max-width: 52ch;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--gray);
+}
+
+.label-strong {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+}
+
+.figure {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.oversized-index {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(5rem, 14vw, 15rem);
+  line-height: 0.8;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--line-strong);
+  margin: 0;
+  user-select: none;
+}

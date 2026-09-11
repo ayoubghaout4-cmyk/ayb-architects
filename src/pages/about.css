@@ -1,0 +1,149 @@
+.about-hero {
+  padding-top: clamp(120px, 18vh, 200px);
+  padding-bottom: clamp(40px, 6vw, 72px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.about-hero__portrait {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  max-width: 320px;
+  overflow: hidden;
+  background: var(--bg-panel);
+}
+
+.about-hero__portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-bio {
+  border-top: 1px solid var(--line);
+}
+
+.about-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-list__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 20px;
+  padding-block: 22px;
+  border-top: 1px solid var(--line);
+}
+
+.about-list__row:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.about-list__title {
+  margin: 0 0 4px;
+}
+
+.about-list__years {
+  white-space: nowrap;
+  color: var(--black);
+}
+
+.chip-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip-list__item {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  border: 1px solid var(--line-strong);
+  padding: 8px 14px;
+  color: var(--ink-soft);
+}
+
+.about-contact-strip {
+  border-top: 1px solid var(--line);
+}
+
+.about-contact-strip__row {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 860px) {
+  .about-list__row {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+/* ========================================
+   ABOUT PAGE — MOBILE
+   ======================================== */
+
+@media (max-width: 520px) {
+
+  .about-page .about-hero {
+    height: auto !important;
+    min-height: 0 !important;
+
+    padding-top: 100px !important;
+    padding-bottom: 40px !important;
+
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto auto auto !important;
+
+    align-content: start !important;
+    justify-content: start !important;
+
+    row-gap: 0 !important;
+  }
+
+  /* PROFILE */
+  .about-page .about-hero > .label {
+    display: block !important;
+
+    margin: 0 0 32px 0 !important;
+    padding: 0 !important;
+
+    position: static !important;
+    transform: none !important;
+  }
+
+  /* AYOUB GHAOUT */
+  .about-page .about-hero > h1.display-1 {
+    display: block !important;
+
+    position: static !important;
+    inset: auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    transform: none !important;
+
+    font-size: clamp(3.6rem, 16vw, 4.6rem) !important;
+    line-height: 0.86 !important;
+    letter-spacing: -0.04em !important;
+  }
+
+  /* AGE — ARCHITECT — LOCATION */
+  .about-page .about-hero > .label-strong {
+    display: block !important;
+
+    position: static !important;
+
+    margin: 20px 0 0 0 !important;
+    padding: 0 !important;
+
+    transform: none !important;
+  }
+}

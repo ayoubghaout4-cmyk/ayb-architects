@@ -1,0 +1,18 @@
+.text-link {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 3px;
+  display: inline-block;
+  transition: color 0.25s var(--ease-architect), border-color 0.25s var(--ease-architect);
+}
+
+.text-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+main {
+  display: block;
+}
